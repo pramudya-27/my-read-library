@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test'){
             steps{
-                sh 'npm test -- --coverage --ci --passWithNoTests'
+                sh 'npm test -- --watchAll=false'
             }
         }
         stage('Build Production'){
