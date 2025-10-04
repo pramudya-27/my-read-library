@@ -1,14 +1,22 @@
 pipeline {
-    agent{
-        docker {
-            image 'node:16-buster-slim'
-            args '-p 3000:3000'
-        }
+    agent any
+    tools {
+        nodejs "NodeJS"
     }
     stages{
         stage('Build'){
             steps{
                 sh 'npm install'
+            }
+        }
+        stage('Test'){
+            steps{
+                sh 'npm test -- --coverage --ci --passWithNoTests'
+            }
+        }
+        stage('Build Production'){
+            steps{
+                sh 'npm run build'
             }
         }
     }
