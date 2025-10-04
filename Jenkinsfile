@@ -11,12 +11,8 @@ pipeline {
         }
         stage('Test'){
             steps{
-                sh ''
-            }
-        }
-        stage('Build Production'){
-            steps{
-                sh 'npm run build'
+                sh 'npm test -- --watchAll=false --coverage'
+                sh 'rm -rf coverage'
             }
         }
         stage(('Deploy')){
