@@ -1,0 +1,219 @@
+/* App.css — gaya e-Library modern */
+
+html, body, .root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f7f8fa;
+  font-family: "Inter", Arial, sans-serif;
+  color: #111827;
+  line-height: 1.5;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #fafbfb 0%, #f2f3f3 100%);
+}
+
+/* HEADER */
+.list-books-title {
+  padding: 18px 0;
+  background: #232f3e; /* navy AWS */
+  text-align: center;
+  color: #fff;
+}
+.list-books-title h1 {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+/* KONTEN UTAMA */
+.list-books-content {
+  flex: 1;
+  padding: 32px 24px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bookshelf {
+  margin-bottom: 36px;
+}
+.bookshelf-title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #232f3e;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e3e6e8;
+  padding-bottom: 6px;
+}
+.bookshelf-books {
+  text-align: left;
+}
+
+/* GRID BUKU */
+.books-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+.books-grid li {
+  list-style: none;
+}
+
+/* KARTU BUKU */
+.book {
+  background: #fff;
+  border: 1px solid #e3e6e8;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.book:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.book-top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.book-cover {
+  width: 128px;
+  height: 193px;
+  border-radius: 8px;
+  background-color: #eef1f4;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #d5d9de;
+}
+
+.book-shelf-changer {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: #232f3e;
+  border-radius: 8px;
+  padding: 3px 5px;
+}
+.book-shelf-changer select {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* INFO BUKU */
+.book-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 8px 0 4px;
+  color: #111827;
+}
+.book-authors {
+  font-size: 12px;
+  color: #6b7280;
+}
+.book a {
+  text-decoration: none;
+  color: #ec7211;
+  font-weight: 600;
+}
+.book a:hover {
+  text-decoration: underline;
+}
+
+/* TOMBOL ADD BUKU */
+.open-search {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+}
+.open-search a {
+  display: inline-block;
+  background: #ff9900;
+  color: #111;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(255, 153, 0, 0.35);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.open-search a:hover {
+  background: #ffa31a;
+  transform: translateY(-2px);
+}
+
+/* HALAMAN SEARCH */
+.search-books {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.search-books-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #232f3e;
+  padding: 12px;
+}
+.search-books-input-wrapper {
+  flex: 1;
+  position: relative;
+}
+.search-books-input-wrapper input {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  border-radius: 8px;
+  border: 1px solid #3b4552;
+  background: #0f1720;
+  color: #fff;
+}
+.close-search {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+.close-search:hover {
+  opacity: 0.8;
+}
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+.pagination button {
+  border: 1px solid #d5d9de;
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.pagination button:hover:not(:disabled) {
+  background: #f2f2f2;
+}
