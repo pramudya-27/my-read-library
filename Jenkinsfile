@@ -21,8 +21,6 @@ pipeline {
         }
         stage(('Deploy')){
             steps{
-            sh 'chmod +x ./scripts/deliver.sh'
-            sh 'chmod +x ./scripts/kill.sh'
             sh 'echo "Deploying application..."'
             sh './scripts/deliver.sh'
             input message : 'Finished using the website? (Click "Proceed" to continue)'
