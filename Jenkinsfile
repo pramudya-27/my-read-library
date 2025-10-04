@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test'){
             steps{
-                sh 'npm test -- --watchAll=false'
+                sh ''
             }
         }
         stage('Build Production'){

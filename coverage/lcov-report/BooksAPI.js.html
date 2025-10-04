@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for BooksAPI.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> BooksAPI.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/50</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10.64% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/47</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.95% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/42</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// BooksAPI.js — Google Books API + localStorage
+&nbsp;
+const GB_API = 'https://www.googleapis.com/books/v1/volumes'
+const SHELF_KEY = 'myreads.shelves'
+&nbsp;
+// opsional: gunakan env .env =&gt; REACT_APP_GOOGLE_API_KEY
+const API_KEY =
+  (typeof process !== 'undefined' &amp;&amp; process.env &amp;&amp; process.env.REACT_APP_GOOGLE_API_KEY) ||
+  (<span class="branch-3 cbranch-no" title="branch not covered" >typeof window !== 'undefined' </span>&amp;&amp; <span class="branch-4 cbranch-no" title="branch not covered" >window.GOOGLE_API_KEY)</span> ||
+<span class="branch-5 cbranch-no" title="branch not covered" >  ''</span>
+&nbsp;
+function <span class="fstat-no" title="function not covered" >withKey(</span>url) {
+<span class="cstat-no" title="statement not covered" >  if (!API_KEY) <span class="cstat-no" title="statement not covered" >return url</span></span>
+  var u = <span class="cstat-no" title="statement not covered" >new URL(url)</span>
+<span class="cstat-no" title="statement not covered" >  u.searchParams.set('key', API_KEY)</span>
+<span class="cstat-no" title="statement not covered" >  return u.toString()</span>
+}
+&nbsp;
+function loadShelves() {
+  try {
+    return JSON.parse(localStorage.getItem(SHELF_KEY)) || <span class="branch-1 cbranch-no" title="branch not covered" >{}</span>
+  } catch (e) {
+    return {}
+  }
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >saveShelves(</span>map) {
+<span class="cstat-no" title="statement not covered" >  localStorage.setItem(SHELF_KEY, JSON.stringify(map))</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >normalizeVolume(</span>item) {
+  const v = <span class="cstat-no" title="statement not covered" >item || {}</span>
+  const info = <span class="cstat-no" title="statement not covered" >v.volumeInfo || {}</span>
+  const img = <span class="cstat-no" title="statement not covered" >info.imageLinks || {}</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return {</span>
+    id: v.id,
+    title: info.title || 'No title',
+    authors: Array.isArray(info.authors) ? info.authors : (info.authors ? [info.authors] : []),
+    imageLinks: { thumbnail: (img &amp;&amp; img.thumbnail) || (img &amp;&amp; img.smallThumbnail) || '' },
+    previewLink: info.previewLink || '',
+    shelf: 'none'
+  }
+}
+&nbsp;
+export const get = <span class="fstat-no" title="function not covered" >as</span>ync (bookId) =&gt; {
+  const res = <span class="cstat-no" title="statement not covered" >await fetch(withKey(GB_API + '/' + bookId))</span>
+  const data = <span class="cstat-no" title="statement not covered" >await res.json()</span>
+  const book = <span class="cstat-no" title="statement not covered" >normalizeVolume(data)</span>
+  const shelves = <span class="cstat-no" title="statement not covered" >loadShelves()</span>
+<span class="cstat-no" title="statement not covered" >  book.shelf = shelves[book.id] || 'none'</span>
+<span class="cstat-no" title="statement not covered" >  return book</span>
+}
+&nbsp;
+export const getAll = async () =&gt; {
+  const shelves = loadShelves()
+  const ids = Object.keys(shelves)
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (ids.length === 0) return []
+  const books = <span class="cstat-no" title="statement not covered" >await Promise.all(ids.map(<span class="fstat-no" title="function not covered" >id</span> =&gt; <span class="cstat-no" title="statement not covered" >get(id).catch(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >null)</span>)</span>)</span>
+<span class="cstat-no" title="statement not covered" >  return books.filter(Boolean).map(<span class="fstat-no" title="function not covered" >b </span>=&gt; (<span class="cstat-no" title="statement not covered" >{ ...b, shelf: shelves[b.id] || 'none' })</span>)</span>
+}
+&nbsp;
+export const update = <span class="fstat-no" title="function not covered" >as</span>ync (book, shelf) =&gt; {
+  const shelves = <span class="cstat-no" title="statement not covered" >loadShelves()</span>
+<span class="cstat-no" title="statement not covered" >  if (shelf === 'none') <span class="cstat-no" title="statement not covered" >delete shelves[book.id]</span></span>
+  else <span class="cstat-no" title="statement not covered" >shelves[book.id] = shelf</span>
+<span class="cstat-no" title="statement not covered" >  saveShelves(shelves)</span>
+<span class="cstat-no" title="statement not covered" >  return { shelves }</span>
+}
+&nbsp;
+export const search = <span class="fstat-no" title="function not covered" >as</span>ync (query, startIndex = <span class="branch-0 cbranch-no" title="branch not covered" >0,</span> maxResults = <span class="branch-0 cbranch-no" title="branch not covered" >20)</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >  if (!query || !query.trim()) <span class="cstat-no" title="statement not covered" >return []</span></span>
+  const params = <span class="cstat-no" title="statement not covered" >new URLSearchParams({</span>
+    q: query.trim(),
+    startIndex: String(startIndex),
+    maxResults: String(maxResults),
+    printType: 'books'
+  })
+  const res = <span class="cstat-no" title="statement not covered" >await fetch(withKey(GB_API + '?' + params.toString()))</span>
+  const data = <span class="cstat-no" title="statement not covered" >await res.json()</span>
+  const items = <span class="cstat-no" title="statement not covered" >Array.isArray(data.items) ? data.items : []</span>
+  const shelves = <span class="cstat-no" title="statement not covered" >loadShelves()</span>
+<span class="cstat-no" title="statement not covered" >  return items.map(normalizeVolume).map(<span class="fstat-no" title="function not covered" >b </span>=&gt; (<span class="cstat-no" title="statement not covered" >{ ...b, shelf: shelves[b.id] || 'none' })</span>)</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 05 2025 01:53:48 GMT+0700 (Western Indonesia Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

@@ -1,8 +1,8 @@
 import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import BookShelf from './BookShelf'
 import SearchBooks from './SearchBooks'
-import { Route, Switch } from 'react-router-dom'
 import './App.css'
 
 class BooksApp extends React.Component {
@@ -60,35 +60,37 @@ class BooksApp extends React.Component {
 
   render() {
     return (
-      <div className="app">
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <BookShelf
-                book={this.state.books}
-                onChange={this.changeShelf}
-              />
-            )}
-          />
-          <Route
-            path="/search"
-            render={() => (
-              <SearchBooks
-                onClick={this.clearArray}
-                book={this.state.AllBooks}
-                OnSearch={this.OnSearch}
-                onChange={this.changeShelf}
-                onNext={() => this.loadMore(1)}
-                onPrev={() => this.loadMore(-1)}
-                hasPrev={this.state.searchIndex > 0}
-                hasNext={this.state.AllBooks.length === this.state.pageSize}
-              />
-            )}
-          />
-        </Switch>
-      </div>
+      <BrowserRouter>
+        <div className="app">
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <BookShelf
+                  book={this.state.books}
+                  onChange={this.changeShelf}
+                />
+              )}
+            />
+            <Route
+              path="/search"
+              render={() => (
+                <SearchBooks
+                  onClick={this.clearArray}
+                  book={this.state.AllBooks}
+                  OnSearch={this.OnSearch}
+                  onChange={this.changeShelf}
+                  onNext={() => this.loadMore(1)}
+                  onPrev={() => this.loadMore(-1)}
+                  hasPrev={this.state.searchIndex > 0}
+                  hasNext={this.state.AllBooks.length === this.state.pageSize}
+                />
+              )}
+            />
+          </Switch>
+        </div>
+      </BrowserRouter>
     )
   }
 }
